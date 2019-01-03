@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_one_to_one_match: false
+  is_set_match: false
+  is_person_match: false
+  match: 1
+  base: 1
+  cap: 1
+
+two:
+  is_one_to_one_match: false
+  is_set_match: false
+  is_person_match: false
+  match: 1
+  base: 1
+  cap: 1

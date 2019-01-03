@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is one to one match:</strong>
+  <%= @match.is_one_to_one_match %>
+</p>
+
+<p>
+  <strong>Is set match:</strong>
+  <%= @match.is_set_match %>
+</p>
+
+<p>
+  <strong>Is person match:</strong>
+  <%= @match.is_person_match %>
+</p>
+
+<p>
+  <strong>Match:</strong>
+  <%= @match.match %>
+</p>
+
+<p>
+  <strong>Base:</strong>
+  <%= @match.base %>
+</p>
+
+<p>
+  <strong>Cap:</strong>
+  <%= @match.cap %>
+</p>
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

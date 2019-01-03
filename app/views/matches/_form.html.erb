@@ -1,0 +1,52 @@
+<%= form_with(model: match, local: true) do |form| %>
+  <% if match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+      <% match.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :is_one_to_one_match %>
+    <%= form.check_box :is_one_to_one_match, id: :match_is_one_to_one_match %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_set_match %>
+    <%= form.check_box :is_set_match, id: :match_is_set_match %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_person_match %>
+    <%= form.check_box :is_person_match, id: :match_is_person_match %>
+  </div>
+
+  <div class="field">
+    <%= form.label :match %>
+    <%= form.number_field :match, id: :match_match %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base %>
+    <%= form.number_field :base, id: :match_base %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cap %>
+    <%= form.number_field :cap, id: :match_cap %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fund_id %>
+    <%= form.collection_select :fund_id, Fund.all, :id, :name, prompt: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  donations: one
+  name: MyString
+  total: 1
+
+two:
+  donations: two
+  name: MyString
+  total: 1
